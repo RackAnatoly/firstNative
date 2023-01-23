@@ -1,37 +1,18 @@
-import {StatusBar} from 'expo-status-bar';
-import {useState} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 
-export default function App() {
-    const [value, setValue] = useState('')
-    return (
-        <View style={styles.container}>
-            <Text style={[globalStyles.text, styles.text]}>Багов нет</Text>
-            {/* <TextInput style={[globalStyles.border, styles.input]} value={value} onChangeText={setValue}/> */}
-            <StatusBar style="auto"/>
-        </View>
-    );
+export default function App (){
+  return (
+    <View style={styles.container}>
+     <Text>Hello world</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#ccc',
-        alignItems: 'center',
-        justifyContent: 'center',
-       
-    },
-    text: {
-        width: 200,
-        fontSize: 18,
-        padding: 8 
-    }
+  container: {
+    flex: 1,
+    padding:50
+  },
 });
-
-const globalStyles = StyleSheet.create({
-    border: {
-        borderStyle: "solid",
-        borderWidth: 1,
-        borderColor: "red"
-    }
-})
